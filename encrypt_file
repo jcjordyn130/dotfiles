@@ -1,11 +1,22 @@
-#!/bin/sh
+#!/usr/bin/env python3
 # encrypt_file
-# Does what's on the tin, encrypts files.
-OPERATION="$1"
-FILE="$2"
+# Does what's on the tin, (en/de)crypts files.
+import os
+import sh
+import argparse
 
-if [ "$OPERATION" = "encrypt" ]; then
-	gpg --cipher-algo AES256 --symmetric --output - $FILE
-elif [ "$OPERATION" = "decrypt" ]; then
-	gpg --output - --decrypt $FILE
-fi
+parser = argparse.ArgumentParser()
+parser.add_argument("--encrypt", action = "store_true")
+parser.add_argument("--decrypt", action = "store_true")
+parser.add_argument("--file")
+args = parser.parse_args()
+
+if args.encrypt:
+	file = args.file.split("/")[-1]
+	sh.gpg(["--cipher-algo", "AES256", "--symmetric", "--output", "encrypted/" + file, args.file], _fg = True)
+elif args.decrypt:
+	file = args.file.split("/")[-1]
+	sh.gpg(["--output", "decrypted/" + file, "--decrypt", "encrypted/" + file], _fg = True)
+else:
+	print("Provide an operation.")
+	raise SystemExit(1)
