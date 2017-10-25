@@ -1,0 +1,5 @@
+# Exclude all decrypted files.
+decrypted/*
+
+# Don't exclude the blank file.
+!decrypted/.empty
