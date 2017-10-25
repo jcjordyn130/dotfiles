@@ -1,8 +1,8 @@
 #!/bin/sh
 # encrypt_file
 # Does what's on the tin, encrypts files.
-FILE="$1"
-OPERATION="$2"
+OPERATION="$1"
+FILE="$2"
 
 if [ "$OPERATION" = "encrypt" ]; then
 	gpg --cipher-algo AES256 --symmetric --output - $FILE
