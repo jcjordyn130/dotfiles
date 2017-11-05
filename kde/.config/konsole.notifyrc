@@ -1,0 +1,45 @@
+[Event/Activity]
+Execute=
+Logfile=
+Sound=
+TTS=
+
+[Event/ActivityHidden]
+Action=Popup|Execute
+Execute=/usr/bin/espeak "Ping"
+Logfile=
+Sound=/home/jordyn/Documents/System Sounds/Ping.ogg
+TTS=
+
+[Event/BellInvisible]
+Action=Popup|Execute
+Execute=/usr/bin/espeak "Ping"
+Logfile=
+Sound=/home/jordyn/Documents/System Sounds/Ping.ogg
+TTS=
+
+[Event/BellVisible]
+Action=Execute
+Execute=/usr/bin/espeak "Ping"
+Logfile=
+Sound=/home/jordyn/Documents/System Sounds/Ping.ogg
+TTS=
+
+[Event/Finished]
+Action=
+Execute=
+Logfile=
+Sound=
+TTS=
+
+[Event/Silence]
+Execute=
+Logfile=
+Sound=
+TTS=
+
+[Event/SilenceHidden]
+Execute=
+Logfile=
+Sound=
+TTS=
