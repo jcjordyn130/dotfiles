@@ -6,29 +6,6 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][13]
-activityId=66569134-2389-4823-8e9a-2151251e9886
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][13][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][13][General]
-showToolbox=false
-sortMode=2
-toolTips=true
-
-[Containments][13][Wallpaper][org.kde.image][General]
-Image=file:///home/jordyn-void/Downloads/Tiles (Black) - Void.png
-height=1080
-width=1920
-
 [Containments][19]
 activityId=
 formfactor=2
@@ -154,7 +131,7 @@ DialogHeight=84
 DialogWidth=1920
 
 [Containments][19][General]
-AppletOrder=20;32;21;23;25;27;30;29;31
+AppletOrder=21;23;25;30
 
 [Containments][2]
 activityId=
@@ -223,18 +200,37 @@ DialogWidth=1920
 [Containments][2][General]
 AppletOrder=3;4;16;6;8
 
-[Containments][33]
-activityId=66569134-2389-4823-8e9a-2151251e9886
+[Containments][34]
+activityId=4999c681-a728-47f4-99ff-a5d6715534fb
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][34][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][34][Wallpaper][org.kde.image][General]
+Image=/home/jordyn-void/Downloads/Tiles (Black) - Void.png
+
+[Containments][35]
+activityId=4999c681-a728-47f4-99ff-a5d6715534fb
 formfactor=0
 immutability=1
 lastScreen=1
 location=0
-plugin=org.kde.desktopcontainment
+plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][33][Wallpaper][org.kde.image][General]
-height=768
-width=1024
+[Containments][35][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][35][Wallpaper][org.kde.image][General]
+Image=file:///home/jordyn-void/Downloads/Tiles (Black) - Void.png
 
 [Containments][7]
 activityId=
