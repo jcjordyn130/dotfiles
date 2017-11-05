@@ -1,3 +1,6 @@
 [submodule "global/.vim/bundle/Vundle.vim"]
 	path = global/.vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim
+[submodule "global/.vim/bundle/vim-indent-guides"]
+	path = global/.vim/bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides
