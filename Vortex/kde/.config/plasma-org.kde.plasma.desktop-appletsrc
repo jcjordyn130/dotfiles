@@ -65,14 +65,6 @@ sources=mem%2Fphysical%2Fapplication
 [Containments][19][Applets][24][Configuration][General]
 sources=disk%2Fsda_(8%3A0)%2FRate%2Fwblk
 
-[Containments][19][Applets][25]
-immutability=1
-plugin=org.kde.plasma.systemmonitor.diskusage
-
-[Containments][19][Applets][25][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
 [Containments][19][Applets][25][Configuration][General]
 sources=partitions%2F%2Ffilllevel,partitions%2Fhome%2Ffilllevel
 
@@ -100,10 +92,6 @@ DialogWidth=720
 startPlayerCmd=vlc
 widgetWidth=250
 
-[Containments][19][Applets][30]
-immutability=1
-plugin=org.kde.plasma.panelspacer
-
 [Containments][19][Applets][30][Configuration][General]
 length=436
 
@@ -126,12 +114,23 @@ DialogWidth=720
 [Containments][19][Applets][32][Configuration][General]
 command=cat /tmp/.__cpu_freq_display__
 
+[Containments][19][Applets][36]
+immutability=1
+plugin=org.kde.plasma.systemmonitor.diskusage
+
+[Containments][19][Applets][36][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][19][Applets][36][Configuration][General]
+sources=partitions%2F%2Ffilllevel,partitions%2Fhome%2Ffilllevel
+
 [Containments][19][ConfigDialog]
-DialogHeight=84
-DialogWidth=1920
+DialogHeight=83
+DialogWidth=1440
 
 [Containments][19][General]
-AppletOrder=21;23;25;30
+AppletOrder=21;23;36
 
 [Containments][2]
 activityId=
