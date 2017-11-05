@@ -30,7 +30,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][19][Applets][20][Configuration][General]
-resources=[{"alias":"CPU: ","childSourceObjects":{"acpi/Thermal_Zone/0-pch_skylake/Temperature":{"temperature":0},"acpi/Thermal_Zone/1-B0D4/Temperature":{"temperature":0},"acpi/Thermal_Zone/2-INT3400 Thermal/Temperature":{"temperature":0},"acpi/Thermal_Zone/3-SEN1/Temperature":{"temperature":0},"acpi/Thermal_Zone/4-acpitz/Temperature":{"temperature":0},"acpi/Thermal_Zone/5-acpitz/Temperature":{"temperature":0},"acpi/Thermal_Zone/6-iwlwifi/Temperature":{"temperature":0},"acpi/Thermal_Zone/7-x86_pkg_temp/Temperature":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_0":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_1":{"temperature":0},"lmsensors/coretemp-isa-0000/Package_id_0":{"temperature":0},"udisks/HGST_HTS721010A9E630_JR1004D31RGXNM":{"temperature":0}},"meltdownTemperature":90,"overrideLimitTemperatures":false,"sourceName":"lmsensors/coretemp-isa-0000/Package_id_0","virtual":false,"warningTemperature":70},{"alias":"HDD:","childSourceObjects":{"acpi/Thermal_Zone/0-pch_skylake/Temperature":{"temperature":0},"acpi/Thermal_Zone/1-B0D4/Temperature":{"temperature":0},"acpi/Thermal_Zone/2-INT3400 Thermal/Temperature":{"temperature":0},"acpi/Thermal_Zone/3-SEN1/Temperature":{"temperature":0},"acpi/Thermal_Zone/4-acpitz/Temperature":{"temperature":0},"acpi/Thermal_Zone/5-acpitz/Temperature":{"temperature":0},"acpi/Thermal_Zone/6-iwlwifi/Temperature":{"temperature":0},"acpi/Thermal_Zone/7-x86_pkg_temp/Temperature":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_0":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_1":{"temperature":0},"lmsensors/coretemp-isa-0000/Package_id_0":{"temperature":0},"udisks/HGST_HTS721010A9E630_JR1004D31RGXNM":{"temperature":0}},"meltdownTemperature":90,"overrideLimitTemperatures":false,"sourceName":"udisks/HGST_HTS721010A9E630_JR1004D31RGXNM","virtual":false,"warningTemperature":70}]
+resources=[{"alias":"CPU: ","childSourceObjects":{"acpi/Thermal_Zone/0-pch_skylake/Temperature":{"temperature":0},"acpi/Thermal_Zone/1-B0D4/Temperature":{"temperature":0},"acpi/Thermal_Zone/2-INT3400 Thermal/Temperature":{"temperature":0},"acpi/Thermal_Zone/3-SEN1/Temperature":{"temperature":0},"acpi/Thermal_Zone/4-acpitz/Temperature":{"temperature":0},"acpi/Thermal_Zone/5-acpitz/Temperature":{"temperature":0},"acpi/Thermal_Zone/6-iwlwifi/Temperature":{"temperature":0},"acpi/Thermal_Zone/7-x86_pkg_temp/Temperature":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_0":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_1":{"temperature":0},"lmsensors/coretemp-isa-0000/Package_id_0":{"temperature":0},"udisks/HGST_HTS721010A9E630_JR1004D31RGXNM":{"temperature":0}},"meltdownTemperature":90,"overrideLimitTemperatures":false,"sourceName":"lmsensors/coretemp-isa-0000/Package_id_0","virtual":false,"warningTemperature":70}]
 warningTemperature=80
 
 [Containments][19][Applets][20][Configuration][Misc]
@@ -95,14 +95,6 @@ widgetWidth=250
 [Containments][19][Applets][30][Configuration][General]
 length=436
 
-[Containments][19][Applets][31]
-immutability=1
-plugin=com.github.zren.batterytime
-
-[Containments][19][Applets][31][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
 [Containments][19][Applets][32]
 immutability=1
 plugin=com.github.zren.commandoutput
@@ -114,23 +106,28 @@ DialogWidth=720
 [Containments][19][Applets][32][Configuration][General]
 command=cat /tmp/.__cpu_freq_display__
 
-[Containments][19][Applets][36]
-immutability=1
-plugin=org.kde.plasma.systemmonitor.diskusage
-
-[Containments][19][Applets][36][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
 [Containments][19][Applets][36][Configuration][General]
 sources=partitions%2F%2Ffilllevel,partitions%2Fhome%2Ffilllevel
+
+[Containments][19][Applets][37][Configuration][General]
+sources=partitions%2F%2Ffilllevel,partitions%2Fhome%2Ffilllevel
+
+[Containments][19][Applets][38]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][19][Applets][38][Configuration][General]
+length=157
+
+[Containments][19][Applets][39][Configuration][General]
+length=48
 
 [Containments][19][ConfigDialog]
 DialogHeight=83
 DialogWidth=1440
 
 [Containments][19][General]
-AppletOrder=21;23;36
+AppletOrder=20;32;21;23;27;38;29
 
 [Containments][2]
 activityId=
@@ -154,6 +151,7 @@ plugin=org.kde.plasma.kickoff
 
 [Containments][2][Applets][3][Configuration][General]
 favorites=systemsettings.desktop
+favoritesPortedToKAstats=true
 
 [Containments][2][Applets][3][Configuration][Shortcuts]
 global=Alt+F1
