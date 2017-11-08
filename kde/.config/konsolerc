@@ -6,7 +6,7 @@ Favorites=Main.profile
 
 [KonsoleWindow]
 ShowWindowTitleOnTitleBar=true
-UseSingleInstance=true
+UseSingleInstance=false
 
 [MainWindow]
 Height 1024=623
