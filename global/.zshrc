@@ -52,6 +52,7 @@ export EDITOR="vim"
 # Logs into into my server via either ssh or mosh.
 alias server="ssh jordynsblog.org -p 20"
 alias server_mosh="mosh --ssh=\"ssh -p 20\" jordynsblog.org"
+alias server_sftp="sftp -P 20 jordynsblog.org"
 
 # Warn if the language isn't UTF-8.
 if echo $LANG | grep US-ASCII >/dev/null 2>&1; then
