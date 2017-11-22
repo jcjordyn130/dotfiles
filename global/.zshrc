@@ -26,7 +26,7 @@ unsetopt notify
 bindkey -v
 
 # Set the default completion options.
-zstyle :compinstall filename '/home/jordyn-void/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
 
