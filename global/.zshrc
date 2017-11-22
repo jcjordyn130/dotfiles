@@ -25,6 +25,11 @@ unsetopt notify
 # Setup Vi-like keybindings.
 bindkey -v
 
+# Fix the operation of special keys.
+bindkey '^[[H' beginning-of-line # Home
+bindkey '^[[F' end-of-line # End
+bindkey '^[[3~' delete-char # Delete
+
 # Set the default completion options.
 zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
