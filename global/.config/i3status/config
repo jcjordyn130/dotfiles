@@ -1,0 +1,59 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 2
+}
+
+order += "disk /"
+order += "disk /home"
+order += "ethernet tun0"
+order += "wireless wlo1"
+order += "battery 0"
+order += "cpu_usage"
+order += "cpu_temperature package"
+order += "tztime local"
+
+wireless wlo1 {
+        format_up = "%essid(%quality): %ip"
+        format_down = "Disconnected"
+}
+
+ethernet tun0 {
+        format_up = "VPN: %ip"
+        format_down = "VPN: Disconnected"
+}
+
+battery 0 {
+        format = "%status: %percentage"
+        format_down = "No battery"
+        status_chr = "CHR"
+        status_bat = "DISCHR"
+        status_full = "FULL"
+	status_unk = "UNK"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 20
+	threshold_type = "percentage"
+}
+
+tztime local {
+        format = "%H:%M:%S %m/%d/%Y"
+}
+
+cpu_usage {
+	format = "CPU(%usage): "
+	separator = false
+	separator_block_width = 1
+}
+
+cpu_temperature package {
+        format = "%degreesC"
+        path = "/sys/class/hwmon/hwmon0/temp1_input"
+}
+
+disk "/" {
+        format = "/: %free"
+}
+
+disk "/home" {
+	format = "/home: %free"
+}
