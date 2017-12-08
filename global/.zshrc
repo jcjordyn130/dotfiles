@@ -26,9 +26,8 @@ unsetopt notify
 bindkey -v
 
 # Fix the operation of special keys.
-bindkey '^[[H' beginning-of-line # Home
-bindkey '^[[F' end-of-line # End
-bindkey '^[[3~' delete-char # Delete
+bindkey "${terminfo[khome]}" beginning-of-line # Home
+bindkey "${terminfo[kend]}" end-of-line # End
 
 # Set the default completion options.
 zstyle :compinstall filename "$HOME/.zshrc"
