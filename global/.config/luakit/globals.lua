@@ -57,6 +57,14 @@ globals.domain_props = {
 	["groups.google.com"] = {
 		enable_javascript = true,
 	},
+
+	["github.com"] = {
+		enable_javascript = true,
+	},
+
+	["ampache.jordynsblog.org"] = {
+		enable_javascript = true,
+	},
 }
 
 -- Don't accept thrid party cookies.
