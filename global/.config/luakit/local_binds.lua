@@ -41,4 +41,5 @@ modes.add_binds("normal", {
 
 	-- Copys selected text into the clipboard on 'Control + c'.
 	{ "<Control-c>", "Copy selected text.", function () luakit.selection.clipboard = luakit.selection.primary end },
+
 })
