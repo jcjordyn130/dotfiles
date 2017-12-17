@@ -42,4 +42,12 @@ modes.add_binds("normal", {
 	-- Copys selected text into the clipboard on 'Control + c'.
 	{ "<Control-c>", "Copy selected text.", function () luakit.selection.clipboard = luakit.selection.primary end },
 
+	-- Toggles JavaScript for the current domain on 'S'.
+	{ "S", "Enable/disable JavaScript for the current domain.", function (w) w:toggle_scripts() end },
+
+	-- Toggles plugins for the current domain on 'P'.
+	{ "P", "Enable/disable plugins for the current domain.", function (w) w:toggle_plugins() end },
+
+	-- Clears all rules on 'C'.
+	{ "C", "Remove all previously added rules for the current domain.", function (w) w:toggle_remove()  end },
 })

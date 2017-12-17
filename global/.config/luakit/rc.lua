@@ -72,6 +72,9 @@ local vertical_tabs = require "vertical_tabs"
 local adblock = require "adblock"
 local adblock_chrome = require "adblock_chrome"
 
+-- Add noscript support.
+local noscript = require "noscript"
+
 -- F12 debug tools support.
 local webinspector = require "webinspector"
 

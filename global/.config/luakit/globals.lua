@@ -22,48 +22,7 @@ globals.search_engines.default = globals.search_engines.google
 -- Per-domain website properties.
 globals.domain_props = {
 	["all"] = {
-		enable_scripts = false,
-		enable_plugins = false,
-	},
-
-	["youtube.com"] = {
-		enable_javascript = true,
-	},
-
-	["facebook.com"] = {
-		enable_javascript = true,
-	},
-
-	["m.facebook.com"] = {
-		enable_javascript = true,
-	},
-
-	["reddit.com"] = {
-		enable_javascript = true,
-	},
-
-	["tparser.org"] = {
-		enable_javascript = true,
-	},
-
-	["store.steampowered.com"] = {
-		enable_javascript = true,
-	},
-
-	["steamcommunity.com"] = {
-		enable_javascript = true,
-	},
-
-	["groups.google.com"] = {
-		enable_javascript = true,
-	},
-
-	["github.com"] = {
-		enable_javascript = true,
-	},
-
-	["ampache.jordynsblog.org"] = {
-		enable_javascript = true,
+		enable_webgl = false,
 	},
 }
 
