@@ -1,0 +1,20 @@
+# Cache up to 5 MB at a time.
+cache=5000
+
+# Use PulseAudio.
+ao=pulse
+
+# Use VDPAU for hardware decoding.
+hwdec=vaapi
+
+# Hardware decode all codecs.
+hwdec-codecs=all
+
+# IPC socket for mpv.
+input-ipc-server=/tmp/mpv.socket
+
+# Don't display artwork.
+audio-display=no
+
+# Allow seeking even if it's a pipe.
+force-seekable=yes
