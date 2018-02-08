@@ -102,7 +102,8 @@ bindsym $mod+Shift+e exit
 bindsym --release Control+Mod1+Delete exec xkill
 
 # Key bindings for keyboard resize mode.
-mode "resize" {     
+set $mode_resize Resize (Left) Shrink width, (Right) Grow width, (Up) Shrink height, (Down) Grow height
+mode "$mode_resize" {
 	# Use the arrow keys to resize the focused window by $resize_px amount.
 	bindsym Left resize shrink width $resize_px px or $resize_px ppt
 	bindsym Right resize grow width $resize_px px or $resize_px ppt
@@ -114,7 +115,7 @@ mode "resize" {
 }
 
 # $MOD+R / Goes into resize mode.
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "$mode_resize"
 
 # Key bindings for the system mode.
 set $mode_system System (l) lock, (Shift+l) Inhibit locking, (Control+l) Uninhibit locking, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
