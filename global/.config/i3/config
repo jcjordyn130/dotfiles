@@ -157,6 +157,8 @@ bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioPlay exec echo cycle pause | socat - $mpv_sock
 bindsym XF86AudioPrev exec echo playlist_prev | socat - $mpv_sock
 bindsym XF86AudioNext exec echo playlist_next | socat - $mpv_sock
+bindsym Shift+F9 exec echo seek -10 | socat - $mpv_sock
+bindsym Shift+F11 exec echo seek +10 | socat - $mpv_sock
 
 # Window rules.
 # I have no clue, but firefox seems to class it's about dialog wrong.
