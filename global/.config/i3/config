@@ -165,6 +165,9 @@ bindsym Shift+F11 exec echo seek +10 | socat - $mpv_sock
 for_window [title="About Mozilla Firefox"] floating enable
 
 # Startup applications.
+# Merge X resources (as required by urxvt, etc)
+exec --no-startup-id xrdb -merge ~/.Xdefaults
+
 # Start albert as it's required by $MOD+D.
 exec --no-startup-id albert
 
