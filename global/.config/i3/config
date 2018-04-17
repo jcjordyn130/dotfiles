@@ -46,6 +46,12 @@ bindsym $mod+Shift+q kill
 # $MOD+D / Shows dmenu.
 bindsym $mod+d exec i3-dmenu-desktop
 
+# $MOD+p / Focuses on the parent container
+bindsym $mod+p focus parent
+
+# $MOD+c / Focuses on the child container
+bindsym $mod+c focus child
+
 # $MOD+[Arrow key] / Changes the current window focus.
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
