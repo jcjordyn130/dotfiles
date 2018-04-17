@@ -43,8 +43,8 @@ bindsym $mod+z exec urxvt
 # $MOD+SHIFT+Q / Quit focused window.
 bindsym $mod+Shift+q kill
 
-# $MOD+D / Shows albert.
-bindsym $mod+d exec albert show
+# $MOD+D / Shows dmenu.
+bindsym $mod+d exec i3-dmenu-desktop
 
 # $MOD+[Arrow key] / Changes the current window focus.
 bindsym $mod+Left focus left
@@ -167,9 +167,6 @@ for_window [title="About Mozilla Firefox"] floating enable
 # Startup applications.
 # Merge X resources (as required by urxvt, etc)
 exec --no-startup-id xrdb -merge ~/.Xdefaults
-
-# Start albert as it's required by $MOD+D.
-exec --no-startup-id albert
 
 # Set the keyboard repeat rate.
 exec --no-startup-id xset r rate $kb_delay $kb_rate
