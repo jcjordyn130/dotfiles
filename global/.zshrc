@@ -58,10 +58,5 @@ alias server="ssh jordynsblog.org -p 20"
 alias server_mosh="mosh --ssh=\"ssh -p 20\" jordynsblog.org"
 alias server_sftp="sftp -P 20 jordynsblog.org"
 
-# Warn if the language isn't UTF-8.
-if echo $LANG | grep US-ASCII >/dev/null 2>&1; then
-	echo -e "\e[0;31mWARNING: \$LANG is set to ASCII, not UTF-8. \e[0m"
-fi
-
 # Run pygreeter.
 pygreeter
