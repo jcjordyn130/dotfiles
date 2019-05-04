@@ -13,10 +13,10 @@ keybindings.set_keybindings(config)
 config.set("tabs.position", "left")
 
 # Use my custom home page.
-config.set("url.start_pages", ["https://home.jordynsblog.org"])
+config.set("url.start_pages", ["about:blank"])
 
 # Use my custom start page.
-config.set("url.default_page", "https://home.jordynsblog.org")
+config.set("url.default_page", "about:blank")
 
 # Set the HTTP cache to be 2147483647 bytes.
 config.set("content.cache.size", 2147483647)
