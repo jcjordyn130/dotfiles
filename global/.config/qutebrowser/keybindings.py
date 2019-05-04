@@ -70,7 +70,10 @@ def set_keybindings(config):
         config.bind("zi", "zoom-in")
         config.bind("zd", "zoom")
 
-        # Hint all links and open them in the background.       
+        # Hint all links and open them in the foreground.
+        config.bind(";u", "hint links")
+
+        # Hint all links and open them in the background.
         config.bind(";b", "hint links tab-bg")
 
         # Hint all links and open them with mpv.
