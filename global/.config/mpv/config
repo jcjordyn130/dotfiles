@@ -1,10 +1,39 @@
-# Cache up to 5 MB at a time.
-cache=5000
+# Cache up to 50 MB at a time.
+cache=50000
 
 # Use PulseAudio.
 ao=pulse
 
-# Use VDPAU for hardware decoding.
+# Use our own GPU based based output.
+vo=gpu
+
+# Use a better upscaler.
+scale=oversample
+
+# Bypass the compositor.
+x11-bypass-compositor=yes
+
+# Force the use of OpenGL Core.
+opengl-es=no
+
+# Force the use of PBOs.
+opengl-pbo=yes
+
+# Decode the video directly to the GPU memory.
+vd-lavc-dr=yes
+
+# Enable optimizations which don't follow the format spec.
+vd-lavc-fast
+
+# Skip the loop filter on non referended frames.
+vd-lavc-skiploopfilter=nonref
+
+# Drop frames from the video output and decoder.
+# This results in minor stuttering.
+framedrop=decoder+vo
+
+# Use hardware decoding
+# We force VAAPI to get hardware decoding without copying the data back into system RAM.
 hwdec=vaapi
 
 # Hardware decode all codecs.
@@ -18,3 +47,6 @@ audio-display=no
 
 # Allow seeking even if it's a pipe.
 force-seekable=yes
+
+# Force english subtitles.
+slang=eng
