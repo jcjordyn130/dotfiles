@@ -21,3 +21,9 @@ load-module module-intended-roles
 
 # Enable positioned event sounds.
 load-module module-position-event-sounds
+
+# Enable audio-related bluetooth profiles.
+load-module module-bluetooth-discover
+
+# Discover other PulseAudio servers.
+load-module module-zeroconf-discover
