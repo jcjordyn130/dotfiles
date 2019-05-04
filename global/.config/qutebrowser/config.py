@@ -3,7 +3,8 @@ import color
 import keybindings
 
 # Make qutebrowser solarized.
-color.set_color(c)
+colortheme = color.SolarizedDark(c)
+colortheme.Apply()
 
 # Set the keybindings.
 keybindings.set_keybindings(config)
