@@ -51,9 +51,6 @@ config.set("content.host_blocking.enabled", True)
 # Set the adblock lists.
 config.set("content.host_blocking.lists", ["https://www.malwaredomainlist.com/hostslist/hosts.txt", "http://someonewhocares.org/hosts/hosts", "http://winhelp2002.mvps.org/hosts.zip", "http://malwaredomains.lehigh.edu/files/justdomains.zip", "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext", "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"])
 
-# Sites to disable user stylesheets on.
-disable_stylesheets = ["*://*.youtube.com/*", "*://*.facebook.com/*", "*://*.amazon.com/*", "*://*.duckduckgo.com/*"]
-
 # Set the downloads directory to "$HOME/Downloads" with pathlib.
 home = Path.home() / "Downloads"
 config.set("downloads.location.directory", str(home))
@@ -76,14 +73,6 @@ config.set("url.searchengines", {
 	"google": "https://www.google.com/search?q={}"
 })
 
-# Enable solarize everything globally.
-config.set("content.user_stylesheets", ["/home/jordyn/code/solarized-everything-css/css/solarized-all-sites-light.css"])
-
 # Per domain settings.
 # Enable WebGL on Facebook as certain games require it.
 config.set("content.webgl", True, "*://facebook.com/")
-
-# Disable user stylesheets for certain domains.
-for pattern in disable_stylesheets:
-	config.set("content.user_stylesheets", [], pattern)
-
