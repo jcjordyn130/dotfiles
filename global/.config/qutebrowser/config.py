@@ -76,3 +76,6 @@ config.set("url.searchengines", {
 # Per domain settings.
 # Enable WebGL on Facebook as certain games require it.
 config.set("content.webgl", True, "*://facebook.com/")
+
+# Disable JavaScript on any and every tor site.
+config.set("content.javascript.enabled", False, "*://*.onion/*")
