@@ -46,8 +46,8 @@ bindsym $mod+z exec $terminal
 # $MOD+SHIFT+Q / Quit focused window.
 bindsym $mod+Shift+q kill
 
-# $MOD+D / Shows dmenu.
-bindsym $mod+d exec i3-dmenu-desktop
+# $MOD+D / Shows the menu.
+bindsym $mod+d exec rofi -show combi
 
 # $MOD+p / Focuses on the parent container
 bindsym $mod+p focus parent
