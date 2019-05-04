@@ -127,13 +127,16 @@ mode "$mode_resize" {
 bindsym $mod+r mode "$mode_resize"
 
 # Key bindings for the system mode.
-set $mode_system System (l) lock, (Shift+l) Inhibit locking, (Control+l) Uninhibit locking, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown, (h) hibernate
 mode "$mode_system" {
 	# Quit i3.
 	bindsym e exit, mode "default"
 
 	# Suspend the system.
-	bindsym s exec --no-startup-id xset s activate, exec --no-startup-id systemctl suspend mode "default"
+	bindsym s exec --no-startup-id $locker, exec --no-startup-id systemctl suspend, mode "default"
+
+	# Hibernate the system.
+	bindsym  h exec --no-startup-id $locker, exec --no-startup-id systemctl hibernate, mode "default"
 
 	# Reboot the system.
 	bindsym r exec --no-startup-id sudo /usr/bin/reboot, mode "default"
@@ -141,7 +144,7 @@ mode "$mode_system" {
 	# Shutdown the system.
 	bindsym Shift+s exec --no-startup-id sudo /usr/bin/poweroff, mode "default"  
 
-	# Force lock.
+	# Lock the system.
 	bindsym --release l exec $locker, mode "default"
 
 	# Use enter to return to the default mode.
