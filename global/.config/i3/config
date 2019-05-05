@@ -34,12 +34,6 @@ floating_modifier $mod
 # Tab our windows by default.
 workspace_layout tabbed
 
-# Configuration for the bottom bar.
-bar {
-        status_command i3status
-        separator_symbol "|"
-}
-
 # $MOD+Z / Starts a terminal.
 bindsym $mod+z exec $terminal
 
@@ -188,3 +182,6 @@ exec --no-startup-id compton
 
 # Restore our wallpaper.
 exec --no-startup-id nitrogen --restore
+
+# Start polybar.
+exec --no-startup-id polybar thebest
