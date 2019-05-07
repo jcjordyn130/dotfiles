@@ -170,23 +170,10 @@ bindsym XF86AudioNext exec playerctl next
 for_window [title="About Mozilla Firefox"] floating enable
 
 # Startup applications.
-# Merge X resources (as required by urxvt, etc)
 exec --no-startup-id xrdb -merge ~/.Xdefaults
-
-# Start PulseAudio.
 exec --no-startup-id pulseaudio --start
-
-# Set the keyboard repeat rate.
 exec --no-startup-id xset r rate $kb_delay $kb_rate
-
-# Turn on tap-to-click.
 exec --no-startup-id synclient TapButton1=1 TapButton2=3 TapButton3=2
-
-# Start up our compositor.
 exec --no-startup-id compton
-
-# Restore our wallpaper.
 exec --no-startup-id nitrogen --restore
-
-# Start polybar.
 exec --no-startup-id polybar thebest
