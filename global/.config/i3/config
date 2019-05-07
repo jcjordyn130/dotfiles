@@ -90,7 +90,8 @@ bindsym $mod+Shift+Control+Left move workspace prev; workspace prev
 bindsym $mod+Shift+Control+Right move workspace next; workspace next
 
 # SHIFT+$MOD+` / Creates a new workspace.
-bindsym $mod+Shift+grave exec "~/code/i3/workspace-new.py"
+#bindsym $mod+Shift+grave exec "~/code/i3/workspace-new.py"
+bindsym $mod+Shift+grave exec "~/bin/i3-newworkspace"
 
 # $MOD+SHIFT+C / Reloads the configuration file.
 bindsym $mod+Shift+c reload
@@ -154,11 +155,15 @@ bindsym XF86AudioLowerVolume exec amixer set Master $voljump%-
 bindsym XF86AudioMute exec amixer set Master toggle
 
 # Media controls.
-bindsym XF86AudioPlay exec echo cycle pause | socat - $mpv_sock
-bindsym XF86AudioPrev exec echo playlist_prev | socat - $mpv_sock
-bindsym XF86AudioNext exec echo playlist_next | socat - $mpv_sock
-bindsym Shift+F9 exec echo seek -10 | socat - $mpv_sock
-bindsym Shift+F11 exec echo seek +10 | socat - $mpv_sock
+#bindsym XF86AudioPlay exec echo cycle pause | socat - $mpv_sock
+#bindsym XF86AudioPrev exec echo playlist_prev | socat - $mpv_sock
+#bindsym XF86AudioNext exec echo playlist_next | socat - $mpv_sock
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec playerctl next
+
+#bindsym Shift+F9 exec echo seek -10 | socat - $mpv_sock
+#bindsym Shift+F11 exec echo seek +10 | socat - $mpv_sock
 
 # Window rules.
 # I have no clue, but firefox seems to class it's about dialog wrong.
