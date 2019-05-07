@@ -98,7 +98,7 @@ label = RAM: %gb_used%/%gb_total%
 type = internal/network
 interface = wlo1
 interval = 3.0
-label-connected = %essid%(%signal%): %local_ip%
+label-connected = %essid%(%signal%): %local_ip% | %upspeed% | %downspeed%
 format-connected-underline = #9f78e1
 
 [module/date]
