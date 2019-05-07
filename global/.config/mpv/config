@@ -32,6 +32,10 @@ vd-lavc-skiploopfilter=nonref
 # This results in minor stuttering.
 framedrop=decoder+vo
 
+# Don't process the frames anymore than we have to.
+# 4K VP9 video sure does take a lot of effort to process.
+gpu-dumb-mode=yes
+
 # Use hardware decoding
 # We force VAAPI to get hardware decoding without copying the data back into system RAM.
 hwdec=vaapi
