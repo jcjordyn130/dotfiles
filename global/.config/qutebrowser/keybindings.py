@@ -100,5 +100,11 @@ def set_keybindings(config):
         config.bind("n", "prompt-accept no", mode = "yesno")
 
         # Keybindings for tor.
-        config.bind("ve", "set content.proxy socks://localhost:9050")
-        config.bind("vd", "set content.proxy system")
+        # v(pn) t(or) e(nable)
+        config.bind("vte", "set content.proxy socks://localhost:9050")
+        config.bind("vtd", "set content.proxy system")
+
+        # Keybindings for SSH tunnel.
+        # v(pn) s(sh) e(nable)
+        config.bind("vse", "set content.proxy socks://localhost:4711")
+        config.bind("vsd", "set content.proxy system")
