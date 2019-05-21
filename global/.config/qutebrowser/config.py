@@ -1,6 +1,7 @@
 from pathlib import Path
 import color
 import keybindings
+import multiprocessing
 
 # Make qutebrowser solarized.
 colortheme = color.SolarizedDark(c)
@@ -89,3 +90,19 @@ config.set("content.webgl", True, "*://facebook.com/")
 
 # Disable JavaScript on any and every tor site.
 config.set("content.javascript.enabled", False, "*://*.onion/*")
+
+# Use low end device mode, it saves a little bit of memory.
+config.set("qt.low_end_device_mode", "always")
+
+# Use the same render process for multible instances of the same site
+# This saves memory when one opens a lot of URLs to the same site, like reddit or facebook.
+config.set("qt.process_model", "process-per-site")
+
+# Enable various switches to enable GPU rendering.
+config.set("qt.args", [
+    "ignore-gpu-blacklist",
+    "enable-gpu-rasterization",
+    "enable-native-gpu-memory-buffers",
+    f"num-raster-threads={multiprocessing.cpu_count()}"
+    "enable-fast-unload"
+])
