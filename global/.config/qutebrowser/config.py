@@ -34,7 +34,17 @@ config.set("tabs.width", "12%")
 config.set("tabs.title.format", "{title}")
 
 # List of URL parameters to strip from the URL on yank.
-config.set("url.yank_ignored_parameters", ["ref", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "feature", "keywords", ])
+config.set("url.yank_ignored_parameters", [
+    "ref",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "feature",
+    "keywords",
+    "fbclid",
+])
 
 # Make the command completion.
 config.set("completion.height", "25%")
