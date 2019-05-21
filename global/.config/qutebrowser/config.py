@@ -101,7 +101,6 @@ config.set("qt.process_model", "process-per-site")
 # Enable various switches to enable GPU rendering.
 config.set("qt.args", [
     "ignore-gpu-blacklist",
-    "enable-gpu-rasterization",
     "enable-native-gpu-memory-buffers",
     f"num-raster-threads={multiprocessing.cpu_count()}"
     "enable-fast-unload"
