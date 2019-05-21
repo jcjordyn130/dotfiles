@@ -59,7 +59,7 @@ config.set("downloads.location.directory", str(home))
 config.set("downloads.location.prompt", False)
 
 # Don't show the scroll bar.
-config.set("scrolling.bar", False)
+config.set("scrolling.bar", "never")
 
 # Disable tab indicators.
 config.set("tabs.indicator.width", 0)
