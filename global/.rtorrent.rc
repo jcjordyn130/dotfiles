@@ -1,0 +1,42 @@
+# Enable Peer Exchange for torrents that aren't private.
+protocol.pex.set = 1
+
+# Only use port 1886
+# This makes traffic control a lot easier.
+network.port_range.set = 1886-1886
+
+# Download directory
+directory = "~/.rtorrent/Downloads"
+
+# Watch ~/Torrents and add new torrent files.
+schedule = watch_directory, 5, 5, load.start=~/.rtorrent/Torrents/*.torrent
+
+# Force encryption on all traffic
+encryption = "require_RC4"
+
+# Enable the DHT
+dht = on
+
+# Use port 1887 for DHT
+dht_port = 1887
+
+# Set the bootstrap DHT nodes.
+schedule2 = dht_node_1, 5, 0, "dht.add_node=router.utorrent.com:6881"
+
+# Send an email when the torrent is complete.
+method.set_key = event.download.finished,notify_me,"execute=~/bin/rtorrent_mail,$d.name="
+
+# Use UDP for the tracker when possible.
+trackers.use_udp.set = 1
+
+# This is where rtorrent keeps it's session.
+session = ~/.rtorrent/session
+
+# Save the session every four hours.
+schedule2 = session_save, 1200, 14400, ((session.save))
+
+# Don't rehash completed torrents on startup because it's painful.
+pieces.hash.on_completion.set = no
+
+# Limit memory usage.
+pieces.memory.max = 100M
