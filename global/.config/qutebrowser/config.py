@@ -97,11 +97,3 @@ config.set("qt.low_end_device_mode", "always")
 # Use the same render process for multible instances of the same site
 # This saves memory when one opens a lot of URLs to the same site, like reddit or facebook.
 config.set("qt.process_model", "process-per-site")
-
-# Enable various switches to enable GPU rendering.
-config.set("qt.args", [
-    "ignore-gpu-blacklist",
-    "enable-native-gpu-memory-buffers",
-    f"num-raster-threads={multiprocessing.cpu_count()}"
-    "enable-fast-unload"
-])
