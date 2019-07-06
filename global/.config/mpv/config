@@ -54,3 +54,8 @@ force-seekable=yes
 
 # Force english subtitles.
 slang=eng
+
+# Force using precise seeking instead of keyframe seeking.
+# This fixes issues with some incorrectly encoded Bluray discs.
+[protocol.bluray]
+hr-seek=yes
